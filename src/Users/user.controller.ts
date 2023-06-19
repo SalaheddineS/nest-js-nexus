@@ -18,5 +18,4 @@ export class UserController {
   ): User {
     return this.userService.addUser(userInfo);
   }
-
 }
