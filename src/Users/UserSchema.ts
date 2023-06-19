@@ -1,5 +1,5 @@
 import * as mongoose from 'mongoose'
-import { Interface } from 'readline'
+import { Roles } from 'src/Roles/RoleSchema'
 
 export const UserSchema = new mongoose.Schema({
     fullName:{type:String,required:true},
@@ -12,6 +12,6 @@ export interface User{
     fullName:string
     email:string
     password:string
-    Roles : []
+    Roles : Roles[]
 }
 
