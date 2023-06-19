@@ -15,7 +15,7 @@ export class UserController {
   @Post('addUser')
   addUser(
     @Body() userInfo:User
-  ): User {
+  ): Promise<User> {
     return this.userService.addUser(userInfo);
   }
 }

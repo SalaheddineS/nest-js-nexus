@@ -1,3 +1,3 @@
 export class Role {
-  constructor(public name: String,public description:String) {}
+  constructor(public name: string,public description:string) {}
 }
