@@ -7,18 +7,16 @@ export class UserController {
   constructor(private readonly userService: UserService) {}
   userList: User[] = [];
 
-  @Get('show')
+  @Get('showUsers')
   getAllUsers(): User[] {
     return this.userList;
   }
 
-  @Post('add')
+  @Post('addUser')
   addUser(
-    @Body() fullName: String,
-    @Body() email: String,
-    @Body() password: String,
+    @Body() userInfo:User
   ): User {
-    const newUser = new User(fullName, email, password, []);
+    const newUser = new User(userInfo.fullName, userInfo.email, userInfo.password, []);
     try {
       this.userList.push(newUser);
       return newUser;
