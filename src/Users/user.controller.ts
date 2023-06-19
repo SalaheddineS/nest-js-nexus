@@ -30,4 +30,9 @@ export class UserController {
   deleteUser(@Param() _id:string){
     return this.userService.deleteUser(_id)
   }
+
+  @Patch('addRoleToUser/:_id/:roleId')
+  addRoleToUser(@Param('_id') _id:string,@Param('roleId') roleId:string){
+    return this.userService.addRoleToUser(_id,roleId)
+  }
 }

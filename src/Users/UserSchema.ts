@@ -12,6 +12,6 @@ export interface User{
     fullName:string
     email:string
     password:string
-    Roles : Roles[]
+    Roles : Roles[] 
 }
 
